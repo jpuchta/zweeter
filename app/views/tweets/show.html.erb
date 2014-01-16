@@ -1,0 +1,7 @@
+<h1>Tweets#show</h1>
+<% tweet=Tweet.find(1) %>
+<h1><%= tweet.status  %></h1>
+<p>Posted by <%= link_to tweet.zombie.name, zombie_path(tweet.zombie) %></p>
+<p>Other way tu use <e>link_to</e>:<br/>
+Posted by <%= link_to tweet.zombie.name, tweet.zombie %></p>
+
