@@ -1,0 +1,2 @@
+class EadibilitiesController < ApplicationController
+end

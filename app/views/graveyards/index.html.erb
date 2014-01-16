@@ -1,0 +1,29 @@
+<h1>Listing graveyards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Capacity</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @graveyards.each do |graveyard| %>
+      <tr>
+        <td><%= graveyard.name %></td>
+        <td><%= graveyard.capacity %></td>
+        <td><%= link_to 'Show', graveyard %></td>
+        <td><%= link_to 'Edit', edit_graveyard_path(graveyard) %></td>
+        <td><%= link_to 'Destroy', graveyard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Graveyard', new_graveyard_path %>

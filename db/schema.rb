@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140115182142) do
+ActiveRecord::Schema.define(version: 20140116195113) do
+
+  create_table "eadibilities", force: true do |t|
+    t.string   "name"
+    t.integer  "quantity"
+    t.string   "taste"
+    t.integer  "graveyard_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "eadibilities", ["graveyard_id"], name: "index_eadibilities_on_graveyard_id"
+
+  create_table "graveyards", force: true do |t|
+    t.string   "name"
+    t.integer  "capacity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tweets", force: true do |t|
     t.text     "status"

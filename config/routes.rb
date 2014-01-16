@@ -1,4 +1,8 @@
 Zweeter::Application.routes.draw do
+  resources :eadibilities
+
+  resources :graveyards
+
   get "zombies/index"
   get "zombies/show"
   get "zombies/new"
